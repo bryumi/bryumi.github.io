@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    /* font-family: 'Handlee', cursive;
+     */
+
+    background-color: #01111f;
+
+    box-shadow: -2px 2px 9px 0px #48474761;
+
+    height: 14vh;
+
+    font-family: 'Roboto Mono', monospace;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    margin-right: 30px;     
+}
+header nav a {
+    text-decoration: none;
+    color: #fff;
+
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.9ms;
+    
+}
+header nav a:hover{
+    color: #d2fae2;
+}
+
+header div img {
+    max-height: 8vh;
+    
+
+    
+}
+#btn-mobile {
+    display: none;
+}
+#menu {
+    display:flex;
+    list-style: none;
+    gap: .5rem;
+}
+
+#menu a{
+    display: block;
+    padding: 1.5rem;
+}
+
+body{
+    background-color: #1b1b1b;
+}
+
+h1{
+    color: #f9f9f1;
+}
+
+h1::after{
+   content: '|';
+   margin-left: 5px;
+   opacity: 1;
+   animation: pisca 0.7s infinite;
+
+}
+
+@keyframes pisca {
+   0%, 100% {
+    opacity: 1;
+   } 
+   50% {
+    opacity: 0;
+   }
+}
+
+@media (max-width: 1150px){
+    #menu {
+        display: block;
+    
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0;
+        background: #d2fae2;
+        
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        display: block;
+        height: calc(100vh - 14vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a{
+        padding: 1.5rem 1rem;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+        color: #011627;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    #hamburger {
+        color: #f9f9f1;
+        border-top: 2px solid;
+        width: 20px;
+        border-radius: 1px;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        border-radius: 1px;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
