@@ -24,6 +24,9 @@ header {
     height: 14vh;
 
     font-family: 'Roboto Mono', monospace;
+
+    position: sticky;
+    top: 0;
 }
 header nav ul {
     display: flex;
@@ -76,7 +79,7 @@ h1{
     font-size: 40px;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
-    padding: 50px;
+    padding: 60px;
 }
 
 h1::after{
@@ -93,6 +96,8 @@ section#main{
     align-items: center;
     align-content: center;
     justify-content: space-around;
+
+    height: 88vh;
 }
 
 section#main div.image {
@@ -112,6 +117,50 @@ section#main div p{
     text-align: center;
     padding: 50px;
     font-size: 30px;
+}
+
+section#about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 86vh;
+
+    background-color: #011627;
+}
+
+section#about-me div{
+    width: 70%;
+    color: #f9f9f1;
+    font-family: 'Roboto Mono', monospace;
+   
+}
+
+section#projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 88vh;
+}
+section#projects div.helpet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    height: 60vh;
+    width: 30vw;
+    border-radius: 5px;
+    background-color: #d2fae2;
+}
+section#projects img {
+    height: 25vh;
+}
+section#projects div.helpet p{
+    color: #011627;
+    font-family: 'Roboto Mono', monospace;
 }
 
 @keyframes pisca {
