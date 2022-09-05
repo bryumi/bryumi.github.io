@@ -17,7 +17,7 @@ header {
     /* font-family: 'Handlee', cursive;
      */
 
-    background-color: #01111f;
+    background-color: #151515;
 
     box-shadow: -2px 2px 9px 0px #48474761;
 
@@ -47,7 +47,7 @@ header nav a {
     
 }
 header nav a:hover{
-    color: #d2fae2;
+    color: #a8fdda;
 }
 
 header div img {
@@ -71,11 +71,11 @@ header div img {
 }
 
 body{
-    background-color: #000c16;
+    background-color: #151515;
 }
 
 h1{
-    color: #f9f9f1;
+    color: #e69d;
     font-size: 40px;
     font-family: 'Roboto Mono', monospace;
     text-align: center;
@@ -112,8 +112,9 @@ section#main img{
 }
 
 section#main div p{
-    color: #f9f9f1;
+    color: #e69dfe;
     font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
     text-align: center;
     padding: 50px;
     font-size: 30px;
@@ -126,7 +127,7 @@ section#about-me{
 
     height: 86vh;
 
-    background-color: #011627;
+    background-color: #181818;
 }
 
 section#about-me div{
@@ -153,7 +154,7 @@ section#projects div.helpet{
     height: 60vh;
     width: 30vw;
     border-radius: 5px;
-    background-color: #d2fae2;
+    background-color: #fecd69;
 }
 section#projects img {
     height: 25vh;
@@ -162,6 +163,34 @@ section#projects div.helpet p{
     color: #011627;
     font-family: 'Roboto Mono', monospace;
 }
+
+section#hard-skills{
+    height: 88vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section#hard-skills div.imgs{
+    width: 75vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section#hard-skills div.imgs img{
+    height: 25vh;
+}
+
+section#hard-skills div.node img{
+    height: 19vh;
+}
+
 
 @keyframes pisca {
    0%, 100% {
