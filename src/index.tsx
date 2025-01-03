@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyle } from './styles/globals';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './styles/theme';
 import '@fontsource/inter'; // Importa a fonte Inter em toda a aplicação
 import { ThemeProviderWithToggle } from './components/ThemeProviderToggle/ThemeProviderToggle';
-
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -15,7 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProviderWithToggle>
-    <GlobalStyle />
+      <GlobalStyle />
       <App />
     </ThemeProviderWithToggle>
   </React.StrictMode>,
