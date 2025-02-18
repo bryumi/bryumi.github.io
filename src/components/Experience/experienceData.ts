@@ -1,4 +1,4 @@
-export const experienceData = [
+export const projectsData = [
   {
     title: 'Projeto Helpet - Digital House',
     year: '2022',
@@ -17,6 +17,15 @@ export const experienceData = [
     description:
       'Desenvolvi um aplicativo de controle de despesas pessoais em React. Destaquei-me na implementação de uma interface dinâmica e responsiva, utilizando styled-components para estilização e integrando as rotas no React.',
   },
+  {
+    title: 'Micro SaaS  - Rocketseat',
+    year: '2025',
+    description:
+      'Participei do desenvolvimento de um projeto de Micro SaaS, utilizando Next.js 15, Tailwind CSS, Firebase, para pagamentos foi utilizado o Stripe. Além de implementar o analytics, focar no SEO da página, e integrar o provider de autenticação do google para o login.',
+    link: 'https://project-in-bio-nu.vercel.app/',
+  },
+];
+export const experienceData = [
   {
     title: 'Estágio Front-end - Mestres da Web',
     year: '02/2024 - 09/2024',

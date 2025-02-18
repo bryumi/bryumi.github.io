@@ -30,13 +30,15 @@ export const Header = styled.div`
   display: grid;
   grid-template-columns: 4fr 2fr 1fr;
   grid-column-gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
 `;
 export const ExperienceContent = styled.div<TextProps>`
   width: 50%;
   height: ${({ showText, index, selectedIndex }) =>
     showText && selectedIndex === index ? 'auto' : '65px'};
   margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   border-radius: 10px;
 
   background-color: ${({ theme }) => theme.colors.background2};
