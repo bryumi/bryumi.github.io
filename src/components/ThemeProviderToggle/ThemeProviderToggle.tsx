@@ -7,11 +7,17 @@ interface ThemeContextProps {
   theme: 'light' | 'dark';
 }
 
-export const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextProps | undefined>(
+  undefined,
+);
 
-export const ThemeProviderWithToggle = ({ children }: { children: ReactNode }) => {
+export const ThemeProviderWithToggle = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const [theme, setTheme] = useState<'light' | 'dark'>(
-    () => (localStorage.getItem('theme') as 'light' | 'dark') || 'light'
+    () => (localStorage.getItem('theme') as 'light' | 'dark') || 'light',
   );
 
   useEffect(() => {
@@ -19,7 +25,7 @@ export const ThemeProviderWithToggle = ({ children }: { children: ReactNode }) =
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (

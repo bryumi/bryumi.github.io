@@ -8,14 +8,13 @@ import { theme } from './styles/theme';
 import '@fontsource/inter'; // Importa a fonte Inter em toda a aplicação
 import { ThemeProviderWithToggle } from './components/ThemeProviderToggle/ThemeProviderToggle';
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
     <ThemeProviderWithToggle>
-    <GlobalStyle />
+      <GlobalStyle />
       <App />
     </ThemeProviderWithToggle>
   </React.StrictMode>,
