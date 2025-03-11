@@ -11,6 +11,11 @@ export const HomeContainer = styled.div`
   height: 100vh;
   width: 100%;
   overflow-y: hidden;
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    overflow: auto;
+  }
 `;
 export const Image = styled.img`
   width: 50%;
@@ -26,6 +31,12 @@ export const Image = styled.img`
   left: -10px;
   top: 0;
   z-index: -1;
+  @media screen and (max-width: 769px) {
+    height: 50%;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+  }
 `;
 export const RightContainer = styled.div`
   width: 50%;
@@ -34,12 +45,26 @@ export const RightContainer = styled.div`
   justify-content: center;
   position: relative;
   left: 3rem;
+  @media screen and (max-width: 769px) {
+    height: 50%;
+    width: 100%;
+    top: -2rem;
+  }
 `;
 export const TextContainer = styled.h1`
+  width: 80%;
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.text};
+  @media screen and (max-width: 769px) {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 769px) {
+    width: 80%;
+    font-size: 1rem;
+  }
 `;
 
 export const ButtonContent = styled.button`

@@ -23,7 +23,7 @@ const Home = ({ onPageChange }: HomeProps) => {
       return 'Boa noite';
     }
   };
-  const text = `Olá, ${getGreeting()}!\n Bem-vindo ao meu portfólio! \n Meu nome é Bruna Yumi\n sou desenvolvedora de software\n !`;
+  const text = `Olá, ${getGreeting()}!\n Bem-vindo ao meu portfólio! \n Meu nome é Bruna Yumi\n sou desenvolvedora de software!\n`;
   useEffect(() => {
     let currentIndex = 0;
     const textArray = text.split('');
@@ -45,10 +45,10 @@ const Home = ({ onPageChange }: HomeProps) => {
       <RightContainer>
         <TextContainer>
           {displayedText.split('\n').map((line, index) => (
-            <span key={index}>
-              {line}
+            <>
+              <span key={index}>{line}</span>
               <br />
-            </span>
+            </>
           ))}
         </TextContainer>
         <ButtonContent onClick={() => onPageChange('Formação')}>

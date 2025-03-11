@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-      background: #5F259F;
+      background: #ec78b8;
       border-radius: 10px;
     }
   }

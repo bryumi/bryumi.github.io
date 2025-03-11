@@ -3,7 +3,6 @@ import {
   ExperienceContainer,
   ExperienceContent,
   ExperienceHeader,
-  ExperienceSubTitle,
   ExperienceTitle,
   Header,
   TextContainer,

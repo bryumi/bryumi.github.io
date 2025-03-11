@@ -5,6 +5,9 @@ export const ContactContainer = styled.div`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 769px) {
+    padding: 1rem 1rem 1rem 5.5rem;
+  }
 `;
 export const ContactHeader = styled.div`
   display: flex;
@@ -21,10 +24,16 @@ export const ContactTitle = styled.h2<ContactTitleProps>`
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '2.5rem')};
   color: ${({ theme, color }) => theme.colors[color]};
   text-align: left;
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+  }
 `;
 export const ContactSubTitle = styled.p`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+  }
 `;
 export const ContactContent = styled.div`
   width: 50%;
@@ -40,6 +49,9 @@ export const ContactContent = styled.div`
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.5;
     text-align: justify;
+  }
+  @media screen and (max-width: 769px) {
+    width: 100%;
   }
 `;
 

@@ -5,6 +5,9 @@ export const SkillsContainer = styled.div`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 769px) {
+    padding: 1rem 1rem 1rem 5.5rem;
+  }
 `;
 export const SkillsHeader = styled.div`
   display: flex;
@@ -21,6 +24,9 @@ export const SkillsTitle = styled.h2<SkillsTitleProps>`
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '2.5rem')};
   color: ${({ theme, color }) => theme.colors[color]};
   text-align: left;
+  @media screen and (max-width: 769px) {
+    font-size: 0.75rem;
+  }
 `;
 export const SkillsSubTitle = styled.p`
   font-size: 1.5rem;
@@ -33,7 +39,7 @@ export const SkillsContent = styled.div`
   padding: 1rem 2rem;
   border-radius: 10px;
 
-  background-color: ${({ theme }) => theme.colors.background2};
+  background-color: ${({ theme }) => theme.colors.white};
 
   display: flex;
   flex-direction: column;
@@ -51,12 +57,21 @@ export const SkillsContent = styled.div`
     width: 3rem;
     height: 3rem;
   }
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 `;
 
 export const SwiperContainer = styled.div`
   width: 90%;
   height: 50%;
   margin: 0 auto;
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 10px;
   .swiper-button-next {
     color: ${({ theme }) => theme.colors.text};
   }

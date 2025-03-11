@@ -52,7 +52,6 @@ const Skills = () => {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  background: 'transparent',
                   borderRadius: '10px',
                 }}
               >

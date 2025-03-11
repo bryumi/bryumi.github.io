@@ -5,6 +5,9 @@ export const ExperienceContainer = styled.div`
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 769px) {
+    padding: 1rem 1rem 1rem 5.5rem;
+  }
 `;
 export const ExperienceHeader = styled.div`
   display: flex;
@@ -21,10 +24,16 @@ export const ExperienceTitle = styled.h2<ExperienceTitleProps>`
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '2.5rem')};
   color: ${({ theme, color }) => theme.colors[color]};
   text-align: left;
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+  }
 `;
 export const ExperienceSubTitle = styled.p`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.colors.text};
+  @media screen and (max-width: 769px) {
+    font-size: 1rem;
+  }
 `;
 export const Header = styled.div`
   display: grid;
@@ -47,6 +56,18 @@ export const ExperienceContent = styled.div<TextProps>`
     background: none;
     border: none;
     cursor: pointer;
+  }
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    height: ${({ showText, index, selectedIndex }) =>
+      showText && selectedIndex === index ? 'auto' : '80px'};
+    padding: 0.5rem 1rem;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    height: ${({ showText, index, selectedIndex }) =>
+      showText && selectedIndex === index ? 'auto' : '100px'};
+    padding: 0.5rem 1rem;
   }
 `;
 interface TextProps {
